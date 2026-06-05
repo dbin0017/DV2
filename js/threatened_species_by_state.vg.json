@@ -9,7 +9,7 @@
   "width": 600,
   "height": 400,
   "data": {
-    "url": "https://raw.githubusercontent.com/dbin0017/FIT2179-DV2/refs/heads/main/data%20(csv%20files)/threatened_species_state_list.csv"
+    "url": "data/threatened_species_state_list"
   },
   "transform": [
     {
