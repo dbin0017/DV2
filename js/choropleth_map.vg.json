@@ -1,0 +1,40 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Density of Threatened Species Across States",
+    "width": 600,
+    "height": 500,
+    "projection": {"type":"mercator"},
+    "data": {
+        "url": "js/australia_map_states_2",
+        "format": {"type": "topojson", "feature": "STE_2021_AUST_GDA2020"}
+    },
+    "transform": [
+        {
+            "lookup": "properties.NAME",
+            "from": {
+                "data": {"url": "data/choropleth_threatened_sepcies.csv"},
+                "key": "State",
+                "fields": ["Threatened Species", "Area (km2)"]
+            }
+        },
+        {"calculate": "datum.Threatened Species/datum.Area (km2) * 1000", 
+        "as": "Number per 1,000 km2 area"}
+    ],
+    "mark": {"type": "geoshape"},
+    "encoding": {
+        "color": {
+            "field": "Number per 1,000 km2 area",
+            "type": "quantitative",
+            "scale": {
+                "type": "threshold",
+                "domain": [10, 20, 30, 40, 50],
+                "range": ["#ffe169", "#edc531", "#dbb42c", "#b69121", "#926c15", "#76520e"]
+            }
+        },
+        "tooltip": [
+            {"field": "properties.NAME", "type": "nominal", "title": "State"},
+            {"field": "Threatened Species", "type": "quantitative"},
+            {"field": "Number per 1,000 km2 area", "type": "quantitative", "format": ".2f"}
+        ]
+    }
+}
