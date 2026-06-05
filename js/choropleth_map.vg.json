@@ -14,10 +14,10 @@
             "from": {
                 "data": {"url": "data/choropleth_threatened_sepcies.csv"},
                 "key": "State",
-                "fields": ["Threatened Species", "Area (km2)"]
+                "fields": ["ThreatenedSpecies", "Area"]
             }
         },
-        {"calculate": "datum.Threatened Species/datum.Area (km2) * 1000", 
+        {"calculate": "datum.ThreatenedSpecies/datum.Area * 1000", 
         "as": "Number per 1,000 km2 area"}
     ],
     "mark": {"type": "geoshape"},
