@@ -1,0 +1,75 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 380,
+  "height": 280,
+  "data": {
+    "values": [
+      {"Action_Area": "Mitigating established & emerging threats", "Target_Count": 3, "Focus_Type": "Operational Action"},
+      {"Action_Area": "Effective planning for conservation", "Target_Count": 2, "Focus_Type": "Policy & Governance"},
+      {"Action_Area": "Climate change adaptation & resilience", "Target_Count": 1, "Focus_Type": "Operational Action"},
+      {"Action_Area": "Conserving, restoring & improving habitat", "Target_Count": 5, "Focus_Type": "Operational Action"},
+      {"Action_Area": "Knowledge and tools", "Target_Count": 2, "Focus_Type": "Research & Science"},
+      {"Action_Area": "Forging stronger partnerships", "Target_Count": 4, "Focus_Type": "Policy & Governance"},
+      {"Action_Area": "Community leadership & engagement", "Target_Count": 1, "Focus_Type": "Community Integration"},
+      {"Action_Area": "Emergency preparedness and response", "Target_Count": 1, "Focus_Type": "Policy & Governance"}
+    ]
+  },
+  "layer": [
+    {
+      "mark": {"type": "rule", "color":"#e9d8a6", "strokeWidth": 3},
+      "encoding": {
+        "y": {
+          "field": "Action_Area",
+          "type": "nominal",
+          "title": null,
+          "sort": "-x"
+        },
+        "x": {
+          "field": "Target_Count",
+          "type": "quantitative",
+          "title": "Number of Listed 2027/2032 Targets",
+          "axis": {"tickMinStep": 1}
+        }
+      }
+    },
+    {
+      "mark": {"type": "circle", "size": 250, "opacity": 1},
+      "encoding": {
+        "y": {
+          "field": "Action_Area",
+          "type": "nominal",
+          "sort": "-x"
+        },
+        "x": {
+          "field": "Target_Count",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "Focus_Type",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Operational Action", "Policy & Governance", "Research & Science", "Community Integration"],
+            "range": ["#a3b18a", "#344e41", "#dda15e", "#7f5539"]
+          },
+          "legend": {
+            "title": "Strategic Category",
+            "orient": "bottom",
+            "columns": 2,
+            "labelFontSize": 10
+          }
+        },
+        "tooltip": [
+          {"field": "Action_Area", "type": "nominal", "title": "Core Action Pillar"},
+          {"field": "Target_Count", "type": "quantitative", "title": "Total Plan Targets"},
+          {"field": "Focus_Type", "type": "nominal", "title": "Strategic Classification"}
+        ]
+      }
+    }
+  ],
+  "config": {
+    "axisY": {
+      "labelLimit": 320,
+      "labelFontSize": 11
+    }
+  }
+}
