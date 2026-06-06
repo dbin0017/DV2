@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 420,
+  "height": 280,
+  "data": {
+    "values": [
+      {"State": "NSW", "Number": 18, "Area_ha": 336371},
+      {"State": "NT", "Number": 6, "Area_ha": 2291108},
+      {"State": "QLD", "Number": 101, "Area_ha": 2810147},
+      {"State": "SA", "Number": 27, "Area_ha": 2672655},
+      {"State": "TAS", "Number": 41, "Area_ha": 145072},
+      {"State": "VIC", "Number": 30, "Area_ha": 116055},
+      {"State": "WA", "Number": 43, "Area_ha": 5305931}
+    ]
+  },
+  "mark": {
+    "type": "circle",
+    "filled": true,
+    "stroke": "#ffffff",
+    "strokeWidth": 1.5,
+    "opacity": 0.85
+  },
+  "encoding": {
+    "x": {
+      "field": "Number",
+      "type": "quantitative",
+      "title": "Number of Marine Protected Areas",
+      "scale": {"zero": false, "padding": 15}
+    },
+    "y": {
+      "field": "Area_ha",
+      "type": "quantitative",
+      "title": "Total Protected Area (Hectares)",
+      "axis": {"format": "~s"}
+    },
+    "size": {
+      "field": "Area_ha",
+      "type": "quantitative",
+      "title": "Area Scale (ha)",
+      "scale": {"range": [200, 2000]},
+      "legend": null
+    },
+    "color": {
+      "field": "State",
+      "type": "nominal",
+      "scale": {"scheme": "tableau20"},
+      "legend": {"orient": "right", "title": "State"}
+    },
+    "tooltip": [
+      {"field": "State", "type": "nominal", "title": "Jurisdiction"},
+      {"field": "Number", "type": "quantitative", "title": "Reserves Count"},
+      {"field": "Area_ha", "type": "quantitative", "title": "Total Hectares", "format": ","}
+    ]
+  },
+  "config": {
+    "axis": {
+      "grid": true,
+      "gridColor": "#e2e8f0"
+    }
+  }
+}
