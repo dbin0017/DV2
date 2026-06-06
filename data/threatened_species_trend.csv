@@ -1,0 +1,217 @@
+Group,Year,Status,Count
+Mammals,2007,rare,26
+Birds,2007,rare,32
+Reptiles,2007,rare,64
+Frogs,2007,rare,24
+Fish,2007,rare,0
+Butterflies,2007,rare,0
+Crayfish,2007,rare,0
+Snails,2007,rare,0
+Mammals,2007,vulnerable,22
+Birds,2007,vulnerable,26
+Reptiles,2007,vulnerable,13
+Frogs,2007,vulnerable,11
+Fish,2007,vulnerable,2
+Butterflies,2007,vulnerable,5
+Crayfish,2007,vulnerable,0
+Snails,2007,vulnerable,0
+Mammals,2007,endangered,16
+Birds,2007,endangered,14
+Reptiles,2007,endangered,8
+Frogs,2007,endangered,15
+Fish,2007,endangered,4
+Butterflies,2007,endangered,2
+Crayfish,2007,endangered,0
+Snails,2007,endangered,0
+Mammals,2007,extinct in the wild,6
+Birds,2007,extinct in the wild,1
+Reptiles,2007,extinct in the wild,0
+Frogs,2007,extinct in the wild,0
+Fish,2007,extinct in the wild,0
+Butterflies,2007,extinct in the wild,0
+Crayfish,2007,extinct in the wild,0
+Snails,2007,extinct in the wild,0
+Mammals,2007,threatened,44
+Birds,2007,threatened,41
+Reptiles,2007,threatened,21
+Frogs,2007,threatened,26
+Fish,2007,threatened,6
+Butterflies,2007,threatened,7
+Crayfish,2007,threatened,0
+Snails,2007,threatened,0
+Mammals,2011,near threatened,24
+Birds,2011,near threatened,30
+Reptiles,2011,near threatened,47
+Frogs,2011,near threatened,13
+Fish,2011,near threatened,0
+Butterflies,2011,near threatened,0
+Crayfish,2011,near threatened,0
+Snails,2011,near threatened,0
+Mammals,2011,vulnerable,24
+Birds,2011,vulnerable,33
+Reptiles,2011,vulnerable,24
+Frogs,2011,vulnerable,17
+Fish,2011,vulnerable,2
+Butterflies,2011,vulnerable,5
+Crayfish,2011,vulnerable,0
+Snails,2011,vulnerable,0
+Mammals,2011,endangered,15
+Birds,2011,endangered,16
+Reptiles,2011,endangered,11
+Frogs,2011,endangered,15
+Fish,2011,endangered,4
+Butterflies,2011,endangered,2
+Crayfish,2011,endangered,0
+Snails,2011,endangered,0
+Mammals,2011,extinct in the wild,6
+Birds,2011,extinct in the wild,1
+Reptiles,2011,extinct in the wild,0
+Frogs,2011,extinct in the wild,0
+Fish,2011,extinct in the wild,0
+Butterflies,2011,extinct in the wild,0
+Crayfish,2011,extinct in the wild,0
+Snails,2011,extinct in the wild,0
+Mammals,2011,threatened,45
+Birds,2011,threatened,50
+Reptiles,2011,threatened,35
+Frogs,2011,threatened,32
+Fish,2011,threatened,6
+Butterflies,2011,threatened,7
+Crayfish,2011,threatened,0
+Snails,2011,threatened,0
+Mammals,2015,near threatened,5
+Birds,2015,near threatened,8
+Reptiles,2015,near threatened,15
+Frogs,2015,near threatened,6
+Fish,2015,near threatened,1
+Butterflies,2015,near threatened,0
+Crayfish,2015,near threatened,0
+Snails,2015,near threatened,0
+Mammals,2015,vulnerable,28
+Birds,2015,vulnerable,33
+Reptiles,2015,vulnerable,37
+Frogs,2015,vulnerable,19
+Fish,2015,vulnerable,5
+Butterflies,2015,vulnerable,5
+Crayfish,2015,vulnerable,1
+Snails,2015,vulnerable,1
+Mammals,2015,endangered,15
+Birds,2015,endangered,17
+Reptiles,2015,endangered,12
+Frogs,2015,endangered,13
+Fish,2015,endangered,4
+Butterflies,2015,endangered,3
+Crayfish,2015,endangered,1
+Snails,2015,endangered,2
+Mammals,2015,extinct in the wild,6
+Birds,2015,extinct in the wild,1
+Reptiles,2015,extinct in the wild,0
+Frogs,2015,extinct in the wild,3
+Fish,2015,extinct in the wild,0
+Butterflies,2015,extinct in the wild,0
+Crayfish,2015,extinct in the wild,0
+Snails,2015,extinct in the wild,0
+Mammals,2015,threatened,49
+Birds,2015,threatened,51
+Reptiles,2015,threatened,49
+Frogs,2015,threatened,35
+Fish,2015,threatened,9
+Butterflies,2015,threatened,8
+Crayfish,2015,threatened,2
+Snails,2015,threatened,3
+Mammals,2015,total species,321
+Birds,2015,total species,871
+Reptiles,2015,total species,586
+Frogs,2015,total species,146
+Fish,2015,total species,563
+Butterflies,2015,total species,534
+Crayfish,2015,total species,47
+Snails,2015,total species,63
+Mammals,2017,near threatened,6
+Birds,2017,near threatened,5
+Reptiles,2017,near threatened,14
+Frogs,2017,near threatened,5
+Fish,2017,near threatened,1
+Butterflies,2017,near threatened,0
+Crayfish,2017,near threatened,0
+Snails,2017,near threatened,0
+Mammals,2017,vulnerable,31
+Birds,2017,vulnerable,36
+Reptiles,2017,vulnerable,39
+Frogs,2017,vulnerable,19
+Fish,2017,vulnerable,5
+Butterflies,2017,vulnerable,5
+Crayfish,2017,vulnerable,1
+Snails,2017,vulnerable,1
+Mammals,2017,endangered,15
+Birds,2017,endangered,25
+Reptiles,2017,endangered,13
+Frogs,2017,endangered,13
+Fish,2017,endangered,4
+Butterflies,2017,endangered,3
+Crayfish,2017,endangered,1
+Snails,2017,endangered,2
+Mammals,2017,extinct in the wild,7
+Birds,2017,extinct in the wild,1
+Reptiles,2017,extinct in the wild,0
+Frogs,2017,extinct in the wild,3
+Fish,2017,extinct in the wild,0
+Butterflies,2017,extinct in the wild,0
+Crayfish,2017,extinct in the wild,0
+Snails,2017,extinct in the wild,0
+Mammals,2017,threatened,53
+Birds,2017,threatened,62
+Reptiles,2017,threatened,52
+Frogs,2017,threatened,35
+Fish,2017,threatened,9
+Butterflies,2017,threatened,8
+Crayfish,2017,threatened,2
+Snails,2017,threatened,3
+Mammals,2017,total species,253
+Birds,2017,total species,715
+Reptiles,2017,total species,522
+Frogs,2017,total species,132
+Fish,2017,total species,527
+Butterflies,2017,total species,444
+Crayfish,2017,total species,22
+Snails,2017,total species,63
+Mammals,2019,near threatened,6
+Birds,2019,near threatened,5
+Reptiles,2019,near threatened,14
+Frogs,2019,near threatened,5
+Fish,2019,near threatened,1
+Butterflies,2019,near threatened,0
+Crayfish,2019,near threatened,0
+Snails,2019,near threatened,0
+Mammals,2019,vulnerable,29
+Birds,2019,vulnerable,35
+Reptiles,2019,vulnerable,39
+Frogs,2019,vulnerable,19
+Fish,2019,vulnerable,5
+Butterflies,2019,vulnerable,5
+Crayfish,2019,vulnerable,1
+Snails,2019,vulnerable,1
+Mammals,2019,endangered,17
+Birds,2019,endangered,29
+Reptiles,2019,endangered,13
+Frogs,2019,endangered,13
+Fish,2019,endangered,4
+Butterflies,2019,endangered,3
+Crayfish,2019,endangered,1
+Snails,2019,endangered,2
+Mammals,2019,presumed extinct,8
+Birds,2019,presumed extinct,1
+Reptiles,2019,presumed extinct,0
+Frogs,2019,presumed extinct,3
+Fish,2019,presumed extinct,0
+Butterflies,2019,presumed extinct,0
+Crayfish,2019,presumed extinct,0
+Snails,2019,presumed extinct,0
+Mammals,2019,threatened,54
+Birds,2019,threatened,65
+Reptiles,2019,threatened,52
+Frogs,2019,threatened,35
+Fish,2019,threatened,9
+Butterflies,2019,threatened,8
+Crayfish,2019,threatened,2
+Snails,2019,threatened,3

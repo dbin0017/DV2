@@ -1,0 +1,52 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Expected Survival of Threatened Animals",
+    "anchor": "start",
+    "fontSize": 16
+  },
+  "width": "container",
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/dbin0017/2179/main/Data%20Visualisation%202/expectedsurvivallistedthreatenedbiodiversity_2024summarytable.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.Group === 'Tetrapods' && datum.Indicator === 'Expected survival of listed threatened species' && datum.Quantity === 'Percent'"
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "tooltip": true,
+    "stroke": "#ffffff",
+    "strokeWidth": 1
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Assessment Year",
+      "axis": {"labelAngle": 0, "labelPadding": 8}
+    },
+    "y": {
+      "field": "Indicator value",
+      "type": "quantitative",
+      "title": "Proportion of Threatened Species",
+      "axis": {"format": "%"}
+    },
+    "color": {
+      "field": "Component",
+      "type": "nominal",
+      "scale": {
+        "domain": ["exp_survival", "potential_loss", "already_lost"],
+        "range": ["#dc267f", "#785ef0", "#648fff"]
+      },
+      "legend": {
+        "title": "Survival Category",
+        "orient": "right",
+        "labelExpr": "datum.value === 'exp_survival' ? 'Expected Survival' : datum.value === 'potential_loss' ? 'Potential Loss' : 'Already Lost'"
+      }
+    }
+  },
+  "config": {}
+}
