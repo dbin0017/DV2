@@ -1,7 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 400,
+  "width":340,
   "height": 300,
+  "autosize": {
+      "type": "fit",
+      "contains": "padding"
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/dbin0017/DV2/main/data/threatened_species_trend.csv",
     "format": {"type": "csv"}

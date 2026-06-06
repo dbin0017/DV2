@@ -4,7 +4,7 @@
   "height": 300,
   "title": {
     "text": "Note:",
-    "fontSize": 11,
+    "fontSize": 12,
     "fontStyle": "bold",
     "anchor": "start",
     "subtitle": [
@@ -12,7 +12,7 @@
       "for specific indicator subsets."
      ],
     "subtitleColor": "dimgray",
-    "subtitleFontSize": 11,
+    "subtitleFontSize": 12,
     "orient": "bottom"
   },
   "data": {
