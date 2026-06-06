@@ -16,7 +16,7 @@
   },
   "layer": [
     {
-      "mark": {"type": "rule", "color":"#e9d8a6", "strokeWidth": 3},
+      "mark": {"type": "rule", "color":"#c8c6bf", "strokeWidth": 3},
       "encoding": {
         "y": {
           "field": "Action_Area",

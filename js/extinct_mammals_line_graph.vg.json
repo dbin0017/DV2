@@ -11,7 +11,7 @@
   "encoding": {
     "x": {"field": "Decade", "type": "temporal"},
     "y": {"field": "Cumulative number of extinct mammal species", "type": "quantitative"},
-    "color": {"value": "brown"},
+    "color": {"value": "#bc6c25"},
     "tooltip": [
       {"field": "Decade", "type": "temporal"},
       {"field": "Cumulative number of extinct mammal species", "type": "quantitative"}

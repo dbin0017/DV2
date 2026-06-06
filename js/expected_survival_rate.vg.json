@@ -8,8 +8,7 @@
     "fontStyle": "bold",
     "anchor": "start",
     "subtitle": [
-      "Certain groups only contain records",
-      "for specific indicator subsets."
+      "Certain groups only contain records for specific indicator subsets."
      ],
     "subtitleColor": "dimgray",
     "subtitleFontSize": 12,
