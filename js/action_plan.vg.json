@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 380,
-  "height": 280,
+  "width": 400,
+  "height": 300,
   "data": {
     "values": [
       {"Action_Area": "Mitigating established & emerging threats", "Target_Count": 3, "Focus_Type": "Operational Action"},
