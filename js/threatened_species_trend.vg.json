@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/dbin0017/DV2/main/data/threatened_species_trend.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {"filter": "datum.Status === 'threatened'"}
+  ],
+  "mark": {"type": "line", "point": true, "strokeWidth": 3},
+  "encoding": {
+    "x": {"field": "Year", "type": "ordinal", "title": "Year"},
+    "y": {"field": "Count", "type": "quantitative", "title": "Number of Listed Species"},
+    "color": {"field": "Group", "type": "nominal", "title": "Animal Group", "scale": {"scheme":"tableau20"}},
+    "tooltip": [
+      {"field": "Group", "type": "nominal", "title": "Group"},
+      {"field": "Year", "type": "ordinal", "title": "Year"},
+      {"field": "Count", "type": "quantitative", "title": "Threatened Count"}
+    ]
+  }
+}
