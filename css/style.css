@@ -1,4 +1,4 @@
-/*Using class selector for different types of text*/
+/* SLIDESHOW BANNER */
 
 * {box-sizing:border-box}
 
@@ -61,6 +61,15 @@
   top: 0;
 }
 
+.credittext {
+color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -88,6 +97,39 @@
   to {opacity: 1}
 }
 
+
+/* BODY */
+.wide-container {
+    width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgb(188, 158, 120);
+    background-color: rgb(222, 184, 135);
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.half-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgb(222, 184, 135);
+    box-shadow: 0 4px 8px rgb(188, 158, 120);
+}
+
 h1 {
   
   color:saddlebrown;
@@ -95,11 +137,11 @@ h1 {
   font-weight: 500;
   font-style: normal;
   text-align: center;
-  font-size: 56px;
+  font-size: 48px !important;
 }
 
 h2 {
-    color:darkgoldenrod;
+    color:peru;
     font-family: "Ultra", serif;
     font-weight: 200;
     font-style: normal;
@@ -150,7 +192,7 @@ p {
     background-color: rgb(240, 228, 228);
     margin: auto;
     padding: 70px;
-    padding-top: 35px;
+    padding-top: 0px;
 }
 
 .desc-right {
