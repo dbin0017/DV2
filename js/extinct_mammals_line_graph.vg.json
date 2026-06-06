@@ -1,10 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Cumulative number of extinct mammal species",
   "width": 400,
   "height": 300,
   "data": {"url": "https://raw.githubusercontent.com/dbin0017/DV2/main/data/cumulative_extinct_mammal.csv"},
-  "mark": "line",
+  "mark": {"type": "line", "strokeWidth": 3},
   "encoding": {
     "x": {"field": "Decade", "type": "temporal"},
     "y": {"field": "Cumulative number of extinct mammal species", "type": "quantitative"},
