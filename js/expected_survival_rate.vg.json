@@ -1,52 +1,88 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 300,
+  "height": 300,
   "title": {
-    "text": "Expected Survival of Threatened Animals",
+    "text": "Note:",
+    "fontSize": 11,
+    "fontStyle": "bold",
     "anchor": "start",
-    "fontSize": 16
+    "subtitle": [
+      "Certain groups only contain records",
+      "for specific indicator subsets."
+     ],
+    "subtitleColor": "dimgray",
+    "subtitleFontSize": 11,
+    "orient": "bottom"
   },
-  "width": "container",
-  "height": 400,
   "data": {
-    "url": "https://raw.githubusercontent.com/dbin0017/2179/main/Data%20Visualisation%202/expectedsurvivallistedthreatenedbiodiversity_2024summarytable.csv"
+    "url": "https://raw.githubusercontent.com/dbin0017/DV2/main/data/expected_survival.csv"
   },
-  "transform": [
+  "params": [
     {
-      "filter": "datum.Group === 'Tetrapods' && datum.Indicator === 'Expected survival of listed threatened species' && datum.Quantity === 'Percent'"
+      "name": "GroupSelect",
+      "value": "Tetrapods",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Tetrapods",
+          "Terrestrial",
+          "Transitional (Terrestrial - Freshwater)",
+          "Transitional (Terrestrial - Marine)",
+          "Other",
+          "Vascular plants",
+          "Gymnosperms",
+          "Proteaceae"
+        ],
+        "name": "Select Group: "
+      }
+    },
+    {
+      "name": "IndicatorSelect",
+      "value": "Expected survival of listed threatened species",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Expected survival of listed threatened species",
+          "Expected survival of listed threatened ecological communities",
+          "Phylogenetic diversity"
+        ],
+        "name": "Indicator"
+      }
     }
   ],
-  "mark": {
-    "type": "bar",
-    "tooltip": true,
-    "stroke": "#ffffff",
-    "strokeWidth": 1
-  },
+  "transform": [
+    {
+      "filter": "datum.Group === GroupSelect && datum.Indicator === IndicatorSelect && datum.Quantity === 'Percent'"
+    }
+  ],
+  "mark": "bar",
   "encoding": {
     "x": {
       "field": "Year",
       "type": "ordinal",
-      "title": "Assessment Year",
-      "axis": {"labelAngle": 0, "labelPadding": 8}
+      "axis": {"labelAngle": 0}
     },
     "y": {
       "field": "Indicator value",
       "type": "quantitative",
-      "title": "Proportion of Threatened Species",
-      "axis": {"format": "%"}
+      "title": "Percentage (%)",
+      "stack": "zero"
     },
     "color": {
       "field": "Component",
       "type": "nominal",
-      "scale": {
-        "domain": ["exp_survival", "potential_loss", "already_lost"],
-        "range": ["#dc267f", "#785ef0", "#648fff"]
-      },
+      "scale": {"scheme":"viridis"},
       "legend": {
         "title": "Survival Category",
         "orient": "right",
-        "labelExpr": "datum.value === 'exp_survival' ? 'Expected Survival' : datum.value === 'potential_loss' ? 'Potential Loss' : 'Already Lost'"
+        "labelExpr": "datum.value == 'exp_survival' ? 'Expected Survival' : datum.value == 'potential_loss' ? 'Potential Loss' : 'Already Lost'"
       }
-    }
-  },
-  "config": {}
+    },
+    "tooltip": [
+      {"field": "Year", "type": "ordinal"},
+      {"field": "Component", "type": "nominal", "title":"Category"},
+      {"field": "Indicator value", "type": "quantitative", "title":"Value", "format": ".2f"}
+    ]
+  }
 }
