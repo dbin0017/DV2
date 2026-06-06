@@ -1,0 +1,45 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 300,
+    "height": 300,
+    "data": {"url": "https://raw.githubusercontent.com/dbin0017/DV2/main/data/status_by_class.csv"},
+
+    "params": [
+        {
+            "name": "Status",
+            "select": {"type": "point", "fields": ["Status"]},
+            "value": "Extinct",
+            "bind": {
+                "input": "select",
+                "options": ["Extinct", "CriticallyEndangered", "Endangered", "Vulnerable"],
+                "name": "Select Status: "
+            }
+        }
+    ],
+
+    "transform": [{"filter": {"param": "Status"}}],
+
+    "mark": {
+        "type": "arc",
+        "innerRadius": 50,
+        "outerRadius": 120
+    },
+
+    "encoding": {
+        "theta": {
+            "field": "Count",
+            "type": "quantitative"
+        },
+        "color": {
+            "field": "Class",
+            "type": "nominal",
+            "scale": {"scheme":"darkgold"},
+            "title": "Animal Class"
+        },
+        "tooltip": [
+            {"field": "Class", "type": "nominal", "title": "Class"},
+            {"field": "Status", "type": "nominal", "title": "Status"},
+            {"field": "Count", "type": "quantitative", "title": "SpeciesCount"}
+        ]
+    }
+}
