@@ -1,0 +1,73 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/dbin0017/DV2/main/data/extinct_species.csv"
+
+  },
+  "transform": [
+    {
+      "filter": "datum.Class != null"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "arc", 
+        "innerRadius": 0, 
+        "outerRadius": 90, 
+        "stroke": "#ffffff", 
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "theta": {
+          "field": "SpeciesCount",
+          "type": "quantitative",
+          "aggregate": "sum"
+        },
+        "color": {
+          "field": "Class",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Mammals", "Birds", "Frogs", "Reptiles", "Other"],
+            "range": ["#914f1e", "#deac80", "#f7dcb9", "#b5c18e", "#597e52"]
+          },
+          "legend": {
+            "title": "Animal Class",
+            "orient": "bottom"
+          }
+        },
+        "tooltip": [
+          {"field": "Class", "type": "nominal", "title": "Class Segment"},
+          {"field": "SpeciesCount", "type": "quantitative", "aggregate": "sum", "title": "Total Extinct in Class", "format": ".0f"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "arc", 
+        "innerRadius": 95, 
+        "outerRadius": 160, 
+        "stroke": "#ffffff", 
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "theta": {
+          "field": "SpeciesCount",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "Class",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {"field": "Class", "type": "nominal", "title": "Class"},
+          {"field": "Animal", "type": "nominal", "title": "Animal Category"},
+          {"field": "SpeciesCount", "type": "quantitative", "title": "Extinct Species Count", "format": ".0f"}
+        ]
+      }
+    }
+  ],
+  "view": {"stroke": null}
+}
