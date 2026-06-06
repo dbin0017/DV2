@@ -1,0 +1,45 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 400,
+    "height": 300,
+    "data":{"url": "https://raw.githubusercontent.com/dbin0017/DV2/main/data/IUCN_threat.csv"},
+    "config": {
+        "view": {"stroke": "transparent"},
+        "axisY": {
+            "labelLimit": 300,
+            "labelFontSize": 9
+        }
+    },
+    
+    "transform": [
+        {"filter": "datum['Broad level threat'] != null && datum['Broad level threat'] != 'No threat info' && datum['EPBC Act status'] != null"}
+    ],
+    "mark": {"type": "rect", "stroke":"lightyellow"},
+    "encoding": {
+        "x": {
+            "field": "EPBC Act status",
+            "type": "nominal",
+            "title": "Conservation Status (EPBC Act)",
+            "sort": ["VU", "EN", "CR", "CE"]
+        },
+        "y": {
+            "field": "Broad level threat",
+            "type": "nominal",
+            "title": "Broad level threat"
+            
+        },
+        "color": {
+            "aggregate":"mean",
+            "field": "Sum of timing, scope, severity",
+            "type": "quantitative",
+            "scale": {"scheme":"yelloworangebrown"},
+            "title": "Average Impact Score"
+        },
+        "tooltip": [
+            {"field": "Broad level threat", "type": "nominal"},
+            {"field": "EPBC Act status", "type": "nominal"},
+            {"aggregate": "mean", "field": "Sum of timing, scope, severity", "type": "quantitative",
+            "format": ".2f", "title": "Average Impact"}
+        ]
+    }
+}
