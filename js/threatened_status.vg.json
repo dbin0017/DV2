@@ -1,13 +1,21 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Threatened Species Status",
     "data": {
-        "url": "data/threatened_species_state_list"
+        "url": "https://raw.githubusercontent.com/dbin0017/DV2/main/data/threatened_species_state_list.csv"
     },
     "mark": "bar",
     "encoding": {
         "x": {"field": "Threatened status", "type": "nominal", "sort": "-y"},
         "y": {"aggregate": "count", "type": "quantitative", "title": "Number of Species"},
-        "color": {"field": "Kingdom", "type": "nominal"}
+        "color": {"field": "Kingdom", 
+        "type": "nominal", 
+        "scale": {"domain":["Plantae", "Animalia"], "range": ["#606c38", "#bc6c25"]}},
+        
+        "tooltip": [
+            {"field": "Threatened status", "type": "nominal"},
+            {"field": "Kingdom", "type": "nominal", "title": "Kingdom"},
+            {"aggregate": "count", "type": "quantitative", "title": "Number of Species"}
+        ]
     }
+    
 }
