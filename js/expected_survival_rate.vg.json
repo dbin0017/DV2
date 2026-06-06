@@ -72,7 +72,10 @@
     "color": {
       "field": "Component",
       "type": "nominal",
-      "scale": {"scheme":"viridis"},
+      "scale": {
+        "domain": ["exp_survival", "potential_loss", "already_lost"],
+        "range": ["#e09f3e", "#9e2a2b", "#540b0e"]
+      },
       "legend": {
         "title": "Survival Category",
         "orient": "right",
@@ -82,7 +85,7 @@
     "tooltip": [
       {"field": "Year", "type": "ordinal"},
       {"field": "Component", "type": "nominal", "title":"Category"},
-      {"field": "Indicator value", "type": "quantitative", "title":"Value", "format": ".2f"}
+      {"field": "Indicator value", "type": "quantitative", "title":"Percentage", "format": ".2f"}
     ]
   }
 }
