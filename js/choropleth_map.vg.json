@@ -29,12 +29,12 @@
             }
         },
         {"calculate": "toNumber(datum.ThreatenedSpecies)/toNumber(datum.Area) * 100000", 
-        "as": "Number per 100,000 km2 area"}
+        "as": "Species per 100k km2 area"}
     ],
     "mark": {"type": "geoshape"},
     "encoding": {
         "color": {
-            "field": "Number per 100,000 km2 area",
+            "field": "Species per 100k km2 area",
             "type": "quantitative",
             "scale": {
                 "type": "threshold",
@@ -45,7 +45,7 @@
         "tooltip": [
             {"field": "properties.STATE_NAME", "type": "nominal", "title": "State"},
             {"field": "ThreatenedSpecies", "type": "quantitative"},
-            {"field": "Number per 100,000 km2 area", "type": "quantitative", "format": ".2f"}
+            {"field": "Species per 100k km2 area", "type": "quantitative", "format": ".2f"}
         ]
     }
 }
