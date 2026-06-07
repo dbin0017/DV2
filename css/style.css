@@ -255,8 +255,17 @@ p {
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    text-align: center;
-    text-justify: distribute;
+
+    display: block;
+    width: 100%;
+    text-align: justify;
+    text-justify:inter-word;
+    text-align-last:justify;
+
+    hyphens: auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+
 }
 
 .page-container {

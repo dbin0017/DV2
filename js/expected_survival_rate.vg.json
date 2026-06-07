@@ -78,7 +78,7 @@
       "legend": {
         "title": "Survival Category",
         "orient": "right",
-        "labelExpr": "datum.value == 'exp_survival' ? 'Expected Survival' : datum.value == 'potential_loss' ? 'Potential Loss' : 'Already Lost'"
+        "labelExpr": "datum.value == 'already_lost' ? 'Already Lost' : datum.value == 'exp_survival' ? 'Expected Survival' : 'Potential Lost'"
       }
     },
     "tooltip": [
